@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDialog</class>
+ <widget class="QDialog" name="MainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1059</width>
+    <height>761</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WebSocket服务器端--测试版</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/feibi_1.jpg</normaloff>:/images/feibi_1.jpg</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>941</width>
+     <height>681</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>60</y>
+     <width>901</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,6">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,3,2,2,2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>服务器监听端口：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBox">
+        <property name="maximum">
+         <number>99999999</number>
+        </property>
+        <property name="value">
+         <number>1234</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Con">
+        <property name="text">
+         <string>连接服务器</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Disc">
+        <property name="text">
+         <string>断开服务器</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_Sen">
+        <property name="text">
+         <string>发送消息</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3">
+      <item>
+       <widget class="QTextEdit" name="textEdit_Sen"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="1,7">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>服务器接受消息：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEdit_Rec"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,7">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>客户端列表：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_Cli">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <zorder>groupBox</zorder>
+  <zorder>label</zorder>
+  <zorder>spinBox</zorder>
+  <zorder>pushButton_Con</zorder>
+  <zorder>pushButton_Disc</zorder>
+  <zorder>pushButton_Sen</zorder>
+  <zorder></zorder>
+  <zorder>textEdit_Sen</zorder>
+  <zorder>label_2</zorder>
+  <zorder>textEdit_Rec</zorder>
+  <zorder>label_3</zorder>
+  <zorder>listWidget_Cli</zorder>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
