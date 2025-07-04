@@ -3,5 +3,19 @@
         <file>res/style/stylesheet.qss</file>
         <file>res/images/user.png</file>
         <file>res/icons/icon.ico</file>
+        <file>res/icons/unvisible.png</file>
+        <file>res/icons/unvisible_hover.png</file>
+        <file>res/icons/visible.png</file>
+        <file>res/icons/visible_hover.png</file>
+        <file>res/images/head_1.png</file>
+        <file>res/images/head_10.png</file>
+        <file>res/images/head_2.png</file>
+        <file>res/images/head_3.png</file>
+        <file>res/images/head_4.png</file>
+        <file>res/images/head_5.png</file>
+        <file>res/images/head_6.png</file>
+        <file>res/images/head_7.png</file>
+        <file>res/images/head_8.png</file>
+        <file>res/images/head_9.png</file>
     </qresource>
 </RCC>

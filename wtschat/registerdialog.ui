@@ -52,7 +52,7 @@
        <item row="3" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QPushButton" name="confirm_btn">
+          <widget class="QPushButton" name="sure_btn">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -233,6 +233,25 @@
              </property>
             </widget>
            </item>
+           <item>
+            <widget class="ClickedLabel" name="pass_visible">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
           </layout>
          </item>
          <item>
@@ -260,6 +279,25 @@
                <width>0</width>
                <height>60</height>
               </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ClickedLabel" name="comfirm_visible">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </item>
@@ -310,7 +348,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="get_code">
+            <widget class="TimerBtn" name="get_code">
              <property name="minimumSize">
               <size>
                <width>100</width>
@@ -332,15 +370,90 @@
       </layout>
       <zorder>verticalSpacer</zorder>
       <zorder>verticalSpacer_2</zorder>
-      <zorder>layoutWidget_2</zorder>
-      <zorder>layoutWidget</zorder>
       <zorder>widget</zorder>
      </widget>
-     <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="tip_label">
+         <property name="font">
+          <font>
+           <family>Agency FB</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>注册成功，5s后返回登陆界面</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tip_label2">
+         <property name="font">
+          <font>
+           <family>Agency FB</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>点击下方按钮立即返回</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <widget class="QPushButton" name="return_btn">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>80</y>
+            <width>150</width>
+            <height>120</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>返回</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TimerBtn</class>
+   <extends>QPushButton</extends>
+   <header>timerbtn.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ClickedLabel</class>
+   <extends>QLabel</extends>
+   <header>clickedlabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="rc.qrc"/>
  </resources>

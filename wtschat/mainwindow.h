@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "logindialog.h"
 #include "registerdialog.h"
-
+#include"resetdialog.h"
 namespace Ui {
 class MainWindow;
 }
@@ -25,6 +25,9 @@ public:
     ~MainWindow();
 public slots:
     void SlotSwitchReg();
+    void SlotSwitchLogin();
+    void SlotSwitchReset();
+    void SlotSwitchLogin2();
 
 
 
@@ -36,6 +39,7 @@ private:
     Ui::MainWindow *ui;
     LoginDialog* _login_dlg;
     RegisterDialog* _reg_dlg;
+    ResetDialog *_reset_dlg;
 
     UIStatus _ui_status;
 };

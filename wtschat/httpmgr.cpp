@@ -22,6 +22,7 @@ void HttpMgr::PostHttpReq(QUrl url, QJsonObject json, ReqId req_id, Modules mod)
     QObject::connect(reply, &QNetworkReply::finished, [reply, self, req_id, mod](){
         //处理错误的情况
         if(reply->error() != QNetworkReply::NoError){
+
             qDebug() << reply->errorString();
             //发送信号通知完成
             emit self->sig_http_finish(req_id, "", ErrorCodes::ERR_NETWORK, mod);
@@ -37,11 +38,14 @@ void HttpMgr::PostHttpReq(QUrl url, QJsonObject json, ReqId req_id, Modules mod)
         reply->deleteLater();
         return;
     });
+
+
 }
 
 HttpMgr::HttpMgr()
 {
     //连接http请求和完成信号，信号槽机制保证队列消费
+
     connect(this, &HttpMgr::sig_http_finish, this, &HttpMgr::slot_http_finish);
 }
 
@@ -51,5 +55,13 @@ void HttpMgr::slot_http_finish(ReqId id, QString res, ErrorCodes err, Modules mo
     if(mod == Modules::REGISTERMOD){
         //发送信号通知指定模块http响应结束
         emit sig_reg_mod_finish(id, res, err);
+    }
+    if(mod == Modules::RESETMOD){
+        //发送信号通知指定模块http响应结束
+        emit sig_reset_mod_finish(id, res, err);
+    }
+
+    if(mod == Modules::LOGINMOD){
+        emit sig_login_mod_finish(id, res, err);
     }
 }

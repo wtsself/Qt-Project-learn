@@ -24,6 +24,12 @@ private slots:
     void on_get_code_clicked();
 
 
+    void on_sure_btn_clicked();
+
+    void on_return_btn_clicked();
+
+    void on_cancel_btn_clicked();
+
 public slots:
     void slot_reg_mod_finish(ReqId id, QString res, ErrorCodes err);
 private:
@@ -40,8 +46,10 @@ private:
     void showTip(QString str,bool b_ok);
     QMap<ReqId, std::function<void(const QJsonObject&)>> _handlers;
     QMap<TipErr, QString> _tip_errs;
+    //定时器，从注册页面返回登陆页面
     QTimer * _countdown_timer;
     int _countdown;
+
 
 signals:
     void sigSwitchLogin();

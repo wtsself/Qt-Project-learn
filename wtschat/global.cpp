@@ -5,6 +5,7 @@ std::function<void(QWidget*)> repolish =[](QWidget *w){
     w->style()->polish(w);
 };
 
+//对密码字符串进行异或加密
 std::function<QString(QString)> xorString = [](QString input){
     QString result = input; // 复制原始字符串，以便进行修改
     int length = input.length(); // 获取字符串的长度

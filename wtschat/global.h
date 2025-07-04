@@ -10,6 +10,7 @@
 #include <QDir>
 #include <QSettings>
 #include<QRegExp>
+#include<QRegularExpression>
 /**
  * @brief repolish用来根据属性刷新qss
  */
@@ -17,6 +18,7 @@ extern std::function<void(QWidget*)> repolish;
 /**
  * @brief The ReqId enum 表示请求的id
  */
+extern std::function<QString(QString)> xorString;
 
 extern QString gate_url_prefix;
 
